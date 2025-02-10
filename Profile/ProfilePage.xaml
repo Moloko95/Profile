@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfileApp.ProfilePage"
+             Title="ProfilePage"
+             BackgroundColor="PeachPuff">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <!-- Profile Picture -->
+            <Button Text="Upload Picture" Clicked="OnUploadPictureClicked" />
+            <Image x:Name="ProfileImage" WidthRequest="150" HeightRequest="150" Aspect="AspectFill" />
+
+            <!-- Name -->
+            <Label Text="Name" />
+            <Entry Text="{Binding Name}" />
+
+            <!-- Surname -->
+            <Label Text="Surname" />
+            <Entry Text="{Binding Surname}" />
+
+            <!-- Email -->
+            <Label Text="Email Address" />
+            <Entry Text="{Binding Email}" />
+
+            <!-- Bio -->
+            <Label Text="Bio" />
+            <Editor Text="{Binding Bio}" HeightRequest="100" />
+
+            <!-- Save Button -->
+            <Button Text="Save Profile" Clicked="OnSaveProfileClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
